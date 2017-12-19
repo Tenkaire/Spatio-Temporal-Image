@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <bottom>
+      <VBox prefHeight="20.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="file_selected" strokeType="OUTSIDE" strokeWidth="0.0" text="File Name: test(default).mp4" textAlignment="CENTER" wrappingWidth="800.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CMPT 365 | Simon Fraser University | Fall 2017" textAlignment="CENTER" wrappingWidth="800.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Final Project: Group of Patrick and Leo" textAlignment="CENTER" wrappingWidth="800.0" />
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox>
+         <children>
+            <HBox minHeight="40.0" prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="selectFile" mnemonicParsing="false" onAction="#getFileName" prefHeight="40.0" prefWidth="120.0" text="Select File">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="STI_copy_col" mnemonicParsing="false" onAction="#STI_by_copy_col_pixel" prefHeight="40.0" prefWidth="170.0" text="STI by copy column pixels">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="STI_copy_row" mnemonicParsing="false" onAction="#STI_by_copy_row_pixel" prefHeight="40.0" prefWidth="170.0" text="STI by copy row pixels">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="STI_hist_col" mnemonicParsing="false" onAction="#STI_by_col_hist_diff" prefHeight="40.0" prefWidth="250.0" text="STI by Histogram Difference (column)">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="STI_hist_row" mnemonicParsing="false" onAction="#STI_by_row_hist_diff" prefHeight="40.0" prefWidth="250.0" text="STI by Histogram Difference (row)">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <ImageView fx:id="imageView" fitHeight="99.0" fitWidth="478.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" top="30.0" />
+         </BorderPane.margin>
+      </ImageView>
+   </top>
+</BorderPane>
